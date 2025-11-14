@@ -1,3 +1,4 @@
+```ignore
 .DS_Store
 
 *.aux
@@ -27,7 +28,7 @@
 *.fls
 *.bcf
 *.xml
-*.pdf
+main.pdf
 # Ignore node_modules
 node_modules/
 main.bcf
@@ -41,3 +42,10 @@ __latexindent_temp.tex
 
 __*.tex
 *SAVE-ERROR
+
+# Ignore GitHub workflow file if it's generated locally or should not be pushed
+.github/workflows/latex.yml
+
+# Ignore generated svg-inkscape artifacts (EPS, _tex files, etc.)
+svg-inkscape/
+```
