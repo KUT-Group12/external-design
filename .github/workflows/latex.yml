@@ -26,7 +26,7 @@ jobs:
           done
 
           echo "Compile LaTeX with latexmk (uplatex + dvipdfmx)"
-          latexmk -pdfdvi -interaction=nonstopmode -halt-on-error main.tex
+          latexmk -pdfdvi -interaction=nonstopmode -halt-on-error -f main.tex
 
           fi
 
