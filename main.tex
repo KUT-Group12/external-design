@@ -2,7 +2,7 @@
 
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[hidelinks]{hyperref}
-
+\usepackage{float}
 \begin{document}
 
 \input{sections/title}
@@ -11,16 +11,22 @@
 \tableofcontents
 \clearpage
 % はじめに
-% \input{sections/section1.tex}
+\input{sections/section1.tex}
 
 % システム概要
 % \input{sections/section2.tex}
 
 % 一般会員サブシステム構成
+\section{一般会員サブシステム}
 %\input{sections/section3_account.tex}
+% ピン投稿機能
+\input{sections/section3_pinpost.tex}
 
 % 事業者会員サブシステム構成
+\section{事業者会員サブシステム}
 
+% ピン投稿機能
+\input{sections/section4_pinpost.tex}
 
 % 管理者側サブシステム構成
 
@@ -35,7 +41,7 @@
 
 
 % ネットワーク設計
-
+\input{sections/section9.tex}
 
 % 貢献度
 
