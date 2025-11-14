@@ -8,7 +8,7 @@
 \end{figure}
 
 \if0
-\begin{table}
+\begin{table}[H]
     \centering
     \caption{}
     \label{tb:}
@@ -24,5 +24,8 @@
     \label{tb:user}
     \begin{tabular}{|c|c|c|c|c|c|} \hline
         カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        id & ○ & & not null & VARCHAR(50) & Google ID \\ \hline
+        gmail & & & not null & VARCHAR(100) & メールアドレス \\ \hline
+        role & & & not null & ENUM('user','business','admin') & 会員区分 \\ \hline
     \end{tabular}
 \end{table}
