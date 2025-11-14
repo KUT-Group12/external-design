@@ -1,0 +1,28 @@
+\section{データベース設計}
+本システムのデータベース設計を以下に示す．図 \ref{fig:sec8/er} はデータの関係をER図で表したものであり，表 \ref{tb:user} から表　はデータベースのテーブル設計である．
+\begin{figure}[H]
+    \centering
+    \includesvg[scale=0.8]{sections/section8_database.svg}
+    \caption{ER図}
+    \label{fig:sec8/er}
+\end{figure}
+
+\if0
+\begin{table}
+    \centering
+    \caption{}
+    \label{tb:}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline      
+    \end{tabular}
+\end{table}
+\fi
+
+\begin{table}[H]
+    \centering
+    \caption{会員情報}
+    \label{tb:user}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+    \end{tabular}
+\end{table}
