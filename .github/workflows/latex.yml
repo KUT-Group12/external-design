@@ -20,6 +20,11 @@ jobs:
 
       - name: Compile only main.tex
         run: |
+          echo "Convert SVG to PDF"
+          for f in sections/*.svg; do
+            inkscape "$f" --export-type=pdf --export-filename="${f%.svg}.pdf"
+          done
+          
           echo "Compiling main.tex"
           # uplatexを2回実行して参照や目次を解決
           uplatex -interaction=nonstopmode main.tex
