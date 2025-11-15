@@ -104,3 +104,17 @@
         postImage & & & & BLOB & 投稿画像 \\ \hline
     \end{tabular}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{場所情報}
+    \label{tb:place}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        placeId & ○ & & not null & INT & 場所ID \\ \hline
+        postId & ○ & ○ & not null & INT & 投稿ID \\ \hline
+        numPost & & & not null & INT & 投稿数 \\ \hline
+        latitude & & & not null & DOUBLE(1, 4) & 緯度 \\ \hline
+        longitude & & & not null & DOUBLE(1, 4) & 経度 \\ \hline
+    \end{tabular}
+\end{table}
