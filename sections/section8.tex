@@ -48,3 +48,17 @@
         userId & & ○ & VARCHAR(50) & Goolge ID \\ \hline
     \end{tabular}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{支払い情報}
+    \label{tb:pay}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        id & ○ & & not null & INT & ID \\ \hline
+        businessId & & ○ & not null & INT & 事業者ID \\ \hline
+        payAmout & & & not null & INT & 支払額 \\ \hline
+        payDate & & & not null & DATE & 支払日 \\ \hline
+        payFlag & & & not null & BOOLEAN & 支払いフラグ \\ \hline
+    \end{tabular}
+\end{table}
