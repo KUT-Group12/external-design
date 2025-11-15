@@ -8,7 +8,7 @@
 \end{figure}
 
 \if0
-\textsc{\begin{table}[H]
+\begin{table}[H]
     \centering
     \caption{}
     \label{tb:}
@@ -16,7 +16,7 @@
         カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
     \end{tabular}
 \end{table}
-}\fi
+\fi
 
 \begin{table}[H]
     \centering
@@ -129,5 +129,20 @@
         postId & ○ & ○ & not null & INT & 投稿ID \\ \hline
         genreName & & & not null & VARCHAR(15) & ジャンル名 \\ \hline
         color & & & not null & VARCHAR(6) & 表示色 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+   \caption{通報情報}
+    \label{tb:report}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        id & ○ & & not null & INT & ID \\ \hline
+        userId & & ○ & not null & VARCHAR(50) & 通報したユーザーのGoogle ID \\ \hline
+        postId & & ○ & not null & INT & 対象投稿ID \\ \hline
+        reason & & & not null & TEXT & 通報理由 \\ \hline
+        date & & & not null & DATE & 通報日時 \\ \hline
+        reportFlag & & & not null & BOOLEAN & 対応済みフラグ \\ \hline
     \end{tabular}
 \end{table}
