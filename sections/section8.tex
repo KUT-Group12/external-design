@@ -27,7 +27,7 @@
         id & ○ & & not null & VARCHAR(50) & Google ID \\ \hline
         gmail & & & not null & VARCHAR(100) & メールアドレス \\ \hline
         role & & & not null & ENUM('user','business','admin') & 会員区分 \\ \hline
-        businessId & & ○ & INT & 事業者ID \\ \hline
+        businessId & & ○ & not null & INT & 事業者ID \\ \hline
     \end{tabular}
 \end{table}
 
@@ -45,7 +45,7 @@
         phone & & & not null & INT & 電話番号 \\ \hline
         registDate & & & not null & DATE & 登録日時 \\ \hline
         profileImage & & & & BLOB & プロフィール画像 \\ \hline
-        userId & & ○ & VARCHAR(50) & Goolge ID \\ \hline
+        userId & & ○ & not null & VARCHAR(50) & Goolge ID \\ \hline
     \end{tabular}
 \end{table}
 
@@ -58,7 +58,7 @@
         id & ○ & & not null & INT & ID \\ \hline
         businessId & & ○ & not null & INT & 事業者ID \\ \hline
         payAmout & & & not null & INT & 支払額 \\ \hline
-        payDate & & & not null & DATE & 支払日 \\ \hline
+        date & & & not null & DATE & 支払日 \\ \hline
         payFlag & & & not null & BOOLEAN & 支払いフラグ \\ \hline
     \end{tabular}
 \end{table}
@@ -72,5 +72,20 @@
         id & ○ & & not null & INT & ID \\ \hline
         blockerId & & ○ & not null & VARCHAR(50) & ブロックしたユーザーのGoogle ID \\ \hline
         blockedId & & ○ & not null & VARCHAR(50) & ブロックされたユーザーのGoogle Id \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{問い合わせ情報}
+    \label{tb:ask}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        id & ○ & & not null & INT & ID \\ \hline
+        date & & & not null & DATE & 問い合わせ日時 \\ \hline
+        subject & & & not null & VARCHAR(100) & 件名 \\ \hline
+        text & & & not null & TEXT & 本文 \\ \hline
+        askId & & ○ & not null & VARCHAR(50) & 問い合わせたユーザーのGoogle ID \\ \hline
+        askFlag & & & not null & BOOLEAN & 問い合わせフラグ \\ \hline
     \end{tabular}
 \end{table}
