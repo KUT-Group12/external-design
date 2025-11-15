@@ -2,7 +2,7 @@
 本システムのデータベース設計を以下に示す．図 \ref{fig:sec8/er} はデータの関係をER図で表したものであり，表 \ref{tb:user} から表　はデータベースのテーブル設計である．
 \begin{figure}[H]
     \centering
-    \includesvg[scale=0.8]{sections/section8_database.svg}
+    \includesvg[inkscapelatex=false, width=1.1\linewidth]{sections/section8_database.svg}
     \caption{ER図}
     \label{fig:sec8/er}
 \end{figure}
@@ -13,7 +13,7 @@
     \caption{}
     \label{tb:}
     \begin{tabular}{|c|c|c|c|c|c|} \hline
-        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline      
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
     \end{tabular}
 \end{table}
 \fi
@@ -27,5 +27,24 @@
         id & ○ & & not null & VARCHAR(50) & Google ID \\ \hline
         gmail & & & not null & VARCHAR(100) & メールアドレス \\ \hline
         role & & & not null & ENUM('user','business','admin') & 会員区分 \\ \hline
+        businessId & & ○ & INT & 事業者ID \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{事業者会員情報}
+    \label{tb:business}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        id & ○ & & not null & INT & ID \\ \hline
+        businessName & & & not null & VARCHAR(50) & 事業者名 \\ \hline
+        kanaBusinessName & & & not null & VARCHAR(50) & カナ事業者名 \\ \hline
+        zipCode & & & not null & INT & 郵便番号 \\ \hline
+        address & & & not null & VARCHAR(100) & 住所 \\ \hline
+        phone & & & not null & INT & 電話番号 \\ \hline
+        registDate & & & not null & DATE & 登録日時 \\ \hline
+        profileImage & & & & BLOB & プロフィール画像 \\ \hline
+        userId & & ○ & VARCHAR(50) & Goolge ID \\ \hline
     \end{tabular}
 \end{table}
