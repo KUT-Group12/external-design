@@ -8,7 +8,7 @@
 \end{figure}
 
 \if0
-\begin{table}[H]
+\textsc{\begin{table}[H]
     \centering
     \caption{}
     \label{tb:}
@@ -16,7 +16,7 @@
         カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
     \end{tabular}
 \end{table}
-\fi
+}\fi
 
 \begin{table}[H]
     \centering
@@ -116,5 +116,18 @@
         numPost & & & not null & INT & 投稿数 \\ \hline
         latitude & & & not null & DOUBLE(1, 4) & 緯度 \\ \hline
         longitude & & & not null & DOUBLE(1, 4) & 経度 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{ジャンル情報}
+    \label{tb:genre}
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+        カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
+        genreId & ○ & & not null & INT & ジャンルID \\ \hline
+        postId & ○ & ○ & not null & INT & 投稿ID \\ \hline
+        genreName & & & not null & VARCHAR(15) & ジャンル名 \\ \hline
+        color & & & not null & VARCHAR(6) & 表示色 \\ \hline
     \end{tabular}
 \end{table}
