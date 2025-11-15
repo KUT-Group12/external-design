@@ -43,7 +43,7 @@
         zipCode & & & not null & INT & 郵便番号 \\ \hline
         address & & & not null & VARCHAR(100) & 住所 \\ \hline
         phone & & & not null & INT & 電話番号 \\ \hline
-        registDate & & & not null & DATE & 登録日時 \\ \hline
+        registDate & & & not null & DATETIME & 登録日時 \\ \hline
         profileImage & & & & BLOB & プロフィール画像 \\ \hline
         userId & & ○ & not null & VARCHAR(50) & Goolge ID \\ \hline
     \end{tabular}
@@ -58,7 +58,7 @@
         id & ○ & & not null & INT & ID \\ \hline
         businessId & & ○ & not null & INT & 事業者ID \\ \hline
         payAmout & & & not null & INT & 支払額 \\ \hline
-        date & & & not null & DATE & 支払日 \\ \hline
+        date & & & not null & DATETIME & 支払日 \\ \hline
         payFlag & & & not null & BOOLEAN & 支払いフラグ \\ \hline
     \end{tabular}
 \end{table}
@@ -82,7 +82,7 @@
     \begin{tabular}{|c|c|c|c|c|c|} \hline
         カラム名 & PK & FK & その他の制約 & 論理データ型 & 説明 \\ \hline\hline
         id & ○ & & not null & INT & ID \\ \hline
-        date & & & not null & DATE & 問い合わせ日時 \\ \hline
+        date & & & not null & DATETIME & 問い合わせ日時 \\ \hline
         subject & & & not null & VARCHAR(100) & 件名 \\ \hline
         text & & & not null & TEXT & 本文 \\ \hline
         askId & & ○ & not null & VARCHAR(50) & 問い合わせたユーザーのGoogle ID \\ \hline
@@ -99,7 +99,7 @@
         id & ○ & & not null & INT & ID \\ \hline
         placeId & & ○ & not null & INT & 場所ID \\ \hline
         userId & & ○ & not null & VARCHAR(50) & 投稿者ID \\ \hline
-        postDate & & & not null & DATE & 投稿日時 \\ \hline
+        postDate & & & not null & DATETIME & 投稿日時 \\ \hline
         text & & & not null & TEXT & 投稿の説明文 \\ \hline
         postImage & & & & BLOB & 投稿画像 \\ \hline
     \end{tabular}
@@ -146,7 +146,7 @@
         userId & & ○ & not null & VARCHAR(50) & 通報したユーザーのGoogle ID \\ \hline
         postId & & ○ & not null & INT & 対象投稿ID \\ \hline
         reason & & & not null & TEXT & 通報理由 \\ \hline
-        date & & & not null & DATE & 通報日時 \\ \hline
+        date & & & not null & DATETIME & 通報日時 \\ \hline
         reportFlag & & & not null & BOOLEAN & 対応済みフラグ \\ \hline
     \end{tabular}
 \end{table}
