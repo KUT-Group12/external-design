@@ -3,6 +3,8 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{float}
+\usepackage{svg}
+
 
 \begin{document}
 
@@ -12,10 +14,10 @@
 \tableofcontents
 \clearpage
 % はじめに
-% \input{sections/section1.tex}
+\input{sections/section1.tex}
 
 % システム概要
-% \input{sections/section2.tex}
+\input{sections/section2.tex}
 
 % 一般会員サブシステム構成
 
@@ -24,12 +26,16 @@
 \input{sections/section3_filter.tex}
 
 
+\input{sections/section3_account.tex}
 % ピン投稿機能
 \input{sections/section3_pinpost.tex}
+%並び替え機能
+\input{sections/section3_sort.tex}
 
 % 事業者会員サブシステム構成
 \section{事業者会員サブシステム}
 \input{sections/section4_mypage.tex}
+\input{sections/section4_account.tex}
 
 % ピン投稿機能
 \input{sections/section4_pinpost.tex}
@@ -39,13 +45,16 @@
 
 
 % ユーザーインターフェース
-
+\section{ユーザーインターフェース}
+\input{sections/section6_User.tex}
+\input{sections/section6_Business.tex}
+\input{sections/section6_administrator.tex}
 
 % 運用・保守設計
 
 
 % データベース設計
-
+\input{sections/section8.tex}
 
 % ネットワーク設計
 \input{sections/section9.tex}
