@@ -1,51 +1,13 @@
 \subsection{通報機能}
 SNS通報機能は，ユーザが不適切な投稿を運営へ通知するための機能である．
-本機能は以下の要素から構成される．
+投稿閲覧画面から「通報」を選択すると，入力フォームが表示する．ユーザーは通報理由を入力し，「通報する」を選択する．通報理由が未記入の場合は「通報理由を入力してください」と表示する．
+通報理由が入力されている場合は，データベースにアクセスして通報理由を保存し「通報を受け付けました。運営が確認いたします。」と表示する．
 
-\begin{itemize}
-  \item 通報ボタン表示機能
-  \item 通報内容入力機能
-  \item 通報送信機能
-\end{itemize}
-
-\subsubsection{通報ボタン表示機能}
-各投稿の詳細画面において「通報」ボタンが表示される．
-ユーザが不適切と感じた投稿に対して，ワンタップで通報画面に遷移できるように設置されている．
-投稿閲覧中に常に同じ位置に表示されるため，ユーザは迷うことなく通報操作を開始することができる．
-
-
-\subsubsection{通報内容入力機能}
-通報ボタンを押すと通報入力画面が表示される．
-通報入力画面では，以下の情報をユーザが選択または入力できる．
-
-\begin{itemize}
-  \item 通報理由（暴言，不適切画像，スパム等）
-  \item 具体的な説明（任意）
-  \item 通報対象投稿の概要（自動表示）
-\end{itemize}
-
-ユーザが入力した内容に応じて，通報理由とともに投稿が運営に送信される．
-入力フォームの上には通報対象の投稿が簡易表示され，ユーザが誤って別の投稿を通報することを防ぐ．
-
-
-\subsubsection{通報送信機能}
-「通報する」ボタンを押すことで通報内容が運営サーバへ送信され,通報受付完了メッセージを表示される．
-
-通報が成功すると投稿画面に戻ることでユーザは処理完了を確認できる．
-
-通報内容が入力されていない場合,通報理由がない場合は「通報理由を入力してください」と表示される.
 
 \begin{figure}[H]
         \centering
-        \includesvg[inkscapelatex=false, width=1\linewidth]{sections/fig_blockpintuho/tuho.svg}
+        \includesvg[inkscapelatex=false, width=1\linewidth]{sections/fig_blockpintuho/tuho_gene.svg}
         \caption{通報機能}
-        \label{fig:report3}
-\end{figure}
-
-\begin{figure}[H]
-        \centering
-        \includesvg[inkscapelatex=false, width=1\linewidth]{sections/fig_blockpintuho/tuho2.svg}
-        \caption{通報機能}
-        \label{fig:report3}
+        \label{fig:tuho_gene}
 \end{figure}
 
