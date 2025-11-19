@@ -15,13 +15,13 @@
 対象利用者をブロックすることができる．
 
 ブロック操作を実行すると「このユーザーをブロックしますか？ブロックすると相手の投稿が表示されなくなります。」と表示され，「OK」を押すとブロック対象の利用者の会員IDがブロックリストに登録され，登録されている利用者の投稿は投稿一覧に表示されなくなる．「キャンセル」を押した場合は投稿閲覧画面に遷移する．
-図 \ref{fig:pin_main1}のシステム構成図では，「OK」を選択する分岐において，キャンセルを押した場合は「NO」へ分岐するものとする．
+図 \ref{fig:block_gene}のシステム構成図では，「OK」を選択する分岐において，キャンセルを押した場合は「NO」へ分岐するものとする．
 
 \begin{figure}[H]
     \centering
-    \includesvg[inkscapelatex=false, width=1\linewidth]{sections/fig_blockpintuho/block.svg}
+    \includesvg[inkscapelatex=false, width=1\linewidth]{sections/fig_blockpintuho/block_gene.svg}
     \caption{ブロック機能}
-    \label{fig:pin_main1}
+    \label{fig:block_gene}
 \end{figure}
 
 
@@ -33,7 +33,7 @@
 
 \begin{figure}[H]
     \centering
-    \includesvg[inkscapelatex=false, width=1.1\linewidth]{sections/fig_blockpintuho/unblock.svg}
+    \includesvg[inkscapelatex=false, width=1.1\linewidth]{sections/fig_blockpintuho/unblock_gene.svg}
     \caption{ブロック解除機能}
-    \label{fig:pin_main2}
+    \label{fig:unblock_gene}
 \end{figure}
