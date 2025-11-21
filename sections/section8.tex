@@ -27,7 +27,6 @@
         id & ○ & & not null & VARCHAR(50) & Google ID \\ \hline
         gmail & & & not null & VARCHAR(100) & メールアドレス \\ \hline
         role & & & not null & ENUM('user','business','admin') & 会員区分 \\ \hline
-        businessId & & ○ & not null & INT & 事業者ID \\ \hline
     \end{tabular}
 \end{table}
 
@@ -87,7 +86,6 @@
         text & & & not null & TEXT & 本文 \\ \hline
         askId & & ○ & not null & VARCHAR(50) & 問い合わせたユーザーのGoogle ID \\ \hline
         askFlag & & & not null & BOOLEAN & 問い合わせフラグ \\ \hline
-        query & & & & TEXT & 下書き \\ \hline
     \end{tabular}
 \end{table}
 
@@ -151,6 +149,7 @@
         reason & & & not null & TEXT & 通報理由 \\ \hline
         date & & & not null & DATETIME & 通報日時 \\ \hline
         reportFlag & & & not null & BOOLEAN & 対応済みフラグ \\ \hline
+        removeFlag & & & not null & BOOLEAN & 削除フラグ \\ \hline
     \end{tabular}
 \end{table}
 
