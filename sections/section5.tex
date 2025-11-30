@@ -1,7 +1,8 @@
 \section{管理者側サブシステム構成}
-管理者側の機能は以下のような機能から構成されている．
+管理者側の機能は以下のような機能から構成されてます．
 
 \begin{itemize}
+    \item ログイン・ログアウト機能
     \item 投稿削除機能
     \item アカウント削除機能
     \item 事業者アカウントへの変更機能
@@ -9,6 +10,24 @@
     \item 運用状況モニタリング機能
     \item 通報機能
 \end{itemize}
+
+\subsection{ログアウト・ログイン機能}
+\begin{figure}[H]
+    \centering
+    \includesvg[keepaspectratio, width=0.8\linewidth]{figures/admin_login.svg}
+    \caption{ログイン機能}
+    \label{fig:admin_login}
+\end{figure}
+
+ログイン機能では，管理者がGoogleアカウントを用いた認証によってシステムにログインする．ログインの処理は一般会員・事業者会員と同様でログイン認証画面で取得したアカウント情報がデータベースに登録済みである場合にログインを許可する．
+
+\begin{figure}[H]
+    \centering
+    \includesvg[keepaspectratio, width=\linewidth]{figures/admin_logout.svg}
+    \caption{ログアウト機能}
+    \label{fig:admin_logout}
+\end{figure}
+ログアウト機能では，すでにログインしている会員が任意のタイミングでログアウト操作を行うことができる．ログアウト操作には，まずログアウト画面を表示し，ユーザーがキャンセルを選択した場合はホーム画面に遷移する．ログアウトを確定した場合はセッション情報を無効化し，ログイン画面へ遷移する．
 
 \subsection{投稿削除機能}
 投稿削除タブを選択すると，投稿一覧を格納しているデータベースにアクセスし，その一覧を表示する．その一覧の右にあるゴミ箱マークを押すことで該当する投稿をデータベースから削除することができる．また，投稿したアカウントに削除した旨の通知を送る．最後に，「削除しました」というポップが表示される．
